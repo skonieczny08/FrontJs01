@@ -3,29 +3,58 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #ccc;
+  background-color: #e2c5f2;
 }
 
 #app {
-  background-color: #ce80b0;
+  background-color: #93638f;
   border: #797373 1px solid;
   padding: 20px;
   border-radius: 8px;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
 }
 input {
   margin: 8px 0;
   padding: 8px;
 }
+.botoes {
+  display: flex;
+  justify-content: center;
+}
+.mostrar {
+  display: flex;
+}
+.esconder {
+  display: none;
+}
+
 #btn-calcular {
-  background-color: #504b50;
-  color: #cec6c6;
+  width: 50%;
+  margin: 0 4px;
+  background-color: #776377;
+  color: #faf9fa;
   padding: 8px;
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+  border: none;
+}
+#btn-limpar {
+  width: 50%;
+  margin: 0 4px;
+  background-color: #bca3c0;
+  color: #faf9fa;
+  padding: 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
 }
 .resultados {
-  background-color: #cec6c6;
+  background-color: #dbc3e4;
   border: #ccc 1px solid;
   padding: 20px;
   border-radius: 8px;

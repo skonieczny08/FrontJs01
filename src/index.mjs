@@ -9,6 +9,7 @@ const soma = document.querySelector(".soma");
 const subtracao = document.querySelector(".subtracao");
 const multiplicacao = document.querySelector(".multiplicacao");
 const divisao = document.querySelector(".divisao");
+const btnLimpar = document.querySelector("#btn-limpar");
 
 // CRIAR A FUNÇÃO - refatorar ou melhorar
 function calcular() {
@@ -21,9 +22,23 @@ function calcular() {
 
   //return res
 }
-calcular();
+function limparFormulario() {
+  const n1 = numero1.value; // REFERENCIA numero1
+  const n2 = numero2.value; // REFERENCIA numero2
+  if (n1 && n2) {
+    const form = document.querySelector("form");
+    form.reset(); // LIMPA O FORMULARIO
+    document.querySelector("#numero1").focus(); // FOCA NO N1
+  }
+}
 
 // ADICIONAR ESCUTADOR DE EVENTOS
 btnCalcular.addEventListener("click", function (evento) {
-  alert(calcular());
+  evento.preventDefault(); // DEIXA DE ATUALIZAR...
+  calcular();
+});
+
+btnLimpar.addEventListener("click", function (evento) {
+  evento.preventDefault();
+  limparFormulario();
 });
